@@ -279,6 +279,25 @@ const routes = [
       showTab: true
     }
   },
+  // 秒杀会场
+  {
+    path: '/seckill',
+    name: 'Seckill',
+    component: () => import('@/views/seckill/index.vue'),
+    meta: {
+      title: '限时秒杀'
+    }
+  },
+  // 秒杀详情
+  {
+    path: '/seckill/detail/:activityId',
+    name: 'SeckillDetail',
+    props: true,
+    component: () => import('@/views/seckill/detail.vue'),
+    meta: {
+      title: '秒杀详情'
+    }
+  },
   // 评论页面
   {
     path: '/goodsComment/:orderGoodsId/:goodsId',
